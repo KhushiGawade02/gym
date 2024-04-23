@@ -1,0 +1,258 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Open Sauce One', sans-serif;
+    font-family: 'Open Sauce Two', sans-serif;
+    font-family: 'Open Sauce Sans', sans-serif;
+}
+
+body{
+    display:block;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;     
+    background-color: #383838;                                         
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 100px;
+    padding-left: 60px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:99;
+    background-color:rgba(0,0,0,0.65);
+}
+
+.navigation a{
+    position:relative;
+    font-size:1.1em;
+    color:#fff;
+    text-decoration: none;
+    font-weight:500;
+    margin-left:40px;
+}
+
+nav.hide{
+    transform: translateY(-100%);
+}
+.navigation a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width: 100%;
+    height: 3px;
+    background:#fff;
+    border-radius:5px;
+    transform-origin: right;
+    transform:scaleX(0);
+    transition:transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+    width:130px;
+    height:50px;
+    background: transparent;
+    border:2px solid #fff;
+    outline:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:1.1em;
+    color:#fff;
+    font-weight:500;
+    margin-left:40px;
+    transition:.5s;
+}
+
+.navigation .btnLogin-popup:hover{
+    background:#fff;
+    color:#162938;
+}
+
+
+
+.logo{
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.course1{
+    display:block;
+    align-items: center;
+    /* min-height: 90vh; */
+    background: url('image/heading.jpg') no-repeat;
+    background-size: cover;
+    background-position: top center; 
+    height: 500px;
+    box-sizing: border-box;
+    padding-top: 90px;
+}
+.course1 h1{
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.course1 h3{
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.course1 h3 span{
+    color: #f36100;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    letter-spacing: 2px;
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+   
+}
+
+h2{
+    text-align: center;
+    margin-top: 50px;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+p{
+    text-align: center;
+    margin-top: 20px;
+    color:darkgoldenrod;
+    font-weight: bold; 
+    letter-spacing: 2px;
+}
+h4{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color:#fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.photos{
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 630px;
+}
+
+.image{
+    width: 100%;
+    float: right;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* margin-left: 10px;
+    margin-right: 5px; */
+    float: left;
+    width: 33%;
+    padding: 5px;    
+}
+
+.image #pic{
+    width: 100%;
+    height: 200px;
+    border-radius: 16px;
+}
+
+footer{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-top: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 154.500px;
+    padding-right: 154.500px;
+    color: white;
+    height: 452.281px;
+    width: auto;
+    background-color: #000000; 
+}
+
+.row{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.logo{
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.col p{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.col h3{
+    margin-left: 15px;
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+    font-family: "Go Bold", Sans-serif;
+    font-size: 25px;
+    color: #ff3f0c;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+}
+
+.col ul li a{
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    color: #fff;
+    font-size: 25px;
+}
+
+.span1{
+    font-size: 3rem;
+    color:blue;
+    margin-right: 15px;
+}
+
+.span2{
+    font-size: 3rem;
+    color:rgb(209, 45, 72); 
+    margin-right: 15px;
+}
+
+.span3{
+    font-size: 3rem;
+    color:red; 
+    margin-right: 15px;
+}

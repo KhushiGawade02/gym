@@ -1,0 +1,432 @@
+
+<!doctype html>
+<html lang="en-GB" prefix="og: https://ogp.me/ns#">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	
+<!-- Search Engine Optimisation by Rank Math - https://s.rankmath.com/home -->
+<title>Group Fitness Classes - Waves Gym Andheri West</title>
+<meta name="description" content="Experience the best group fitness classes in Andheri West, Mumbai. Sign-up today for a complimentary Zumba, Spinning, Kickboxing, or Power Yoga Class!"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://wavesgym.com/classes/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Group Fitness Classes - Waves Gym Andheri West" />
+<meta property="og:description" content="Experience the best group fitness classes in Andheri West, Mumbai. Sign-up today for a complimentary Zumba, Spinning, Kickboxing, or Power Yoga Class!" />
+<meta property="og:url" content="https://wavesgym.com/classes/" />
+<meta property="og:site_name" content="Waves Gym" />
+<meta property="og:updated_time" content="2022-06-02T13:12:44+05:30" />
+<meta property="og:image" content="https://wavesgym.com/wp-content/uploads/2022/05/Waves-Spotlight-Classes-1024x576.jpg" />
+<meta property="og:image:secure_url" content="https://wavesgym.com/wp-content/uploads/2022/05/Waves-Spotlight-Classes-1024x576.jpg" />
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="450" />
+<meta property="og:image:alt" content="Classes" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="article:published_time" content="2022-05-30T18:02:19+05:30" />
+<meta property="article:modified_time" content="2022-06-02T13:12:44+05:30" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Group Fitness Classes - Waves Gym Andheri West" />
+<meta name="twitter:description" content="Experience the best group fitness classes in Andheri West, Mumbai. Sign-up today for a complimentary Zumba, Spinning, Kickboxing, or Power Yoga Class!" />
+<meta name="twitter:image" content="https://wavesgym.com/wp-content/uploads/2022/05/Waves-Spotlight-Classes-1024x576.jpg" />
+<meta name="twitter:label1" content="Time to read" />
+<meta name="twitter:data1" content="Less than a minute" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://wavesgym.com/#person","name":"Waves Gym","logo":{"@type":"ImageObject","@id":"https://wavesgym.com/#logo","url":"https://wavesgym.com/wp-content/uploads/2022/05/logo-waves-gym.svg","contentUrl":"https://wavesgym.com/wp-content/uploads/2022/05/logo-waves-gym.svg","caption":"Waves Gym","inLanguage":"en-GB"},"image":{"@type":"ImageObject","@id":"https://wavesgym.com/#logo","url":"https://wavesgym.com/wp-content/uploads/2022/05/logo-waves-gym.svg","contentUrl":"https://wavesgym.com/wp-content/uploads/2022/05/logo-waves-gym.svg","caption":"Waves Gym","inLanguage":"en-GB"}},{"@type":"WebSite","@id":"https://wavesgym.com/#website","url":"https://wavesgym.com","name":"Waves Gym","publisher":{"@id":"https://wavesgym.com/#person"},"inLanguage":"en-GB"},{"@type":"ImageObject","@id":"https://wavesgym.com/wp-content/uploads/2022/05/Waves-Spotlight-Classes.jpg","url":"https://wavesgym.com/wp-content/uploads/2022/05/Waves-Spotlight-Classes.jpg","width":"2240","height":"1260","inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://wavesgym.com/classes/#webpage","url":"https://wavesgym.com/classes/","name":"Group Fitness Classes - Waves Gym Andheri West","datePublished":"2022-05-30T18:02:19+05:30","dateModified":"2022-06-02T13:12:44+05:30","isPartOf":{"@id":"https://wavesgym.com/#website"},"primaryImageOfPage":{"@id":"https://wavesgym.com/wp-content/uploads/2022/05/Waves-Spotlight-Classes.jpg"},"inLanguage":"en-GB"},{"@type":"Person","@id":"https://wavesgym.com/author/dinesh/","name":"dinesh","url":"https://wavesgym.com/author/dinesh/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/c2b06ae950033b392998ada50767b50e?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/c2b06ae950033b392998ada50767b50e?s=96&amp;d=mm&amp;r=g","caption":"dinesh","inLanguage":"en-GB"},"sameAs":["http://evanescent-oranges.flywheelstaging.com"]},{"@type":"Article","headline":"Group Fitness Classes - Waves Gym Andheri West","keywords":"Classes,Group Fitness Classes","datePublished":"2022-05-30T18:02:19+05:30","dateModified":"2022-06-02T13:12:44+05:30","author":{"@id":"https://wavesgym.com/author/dinesh/"},"publisher":{"@id":"https://wavesgym.com/#person"},"description":"Experience the best group fitness classes in Andheri West, Mumbai. Sign-up today for a complimentary Zumba, Spinning, Kickboxing, or Power Yoga Class!","name":"Group Fitness Classes - Waves Gym Andheri West","@id":"https://wavesgym.com/classes/#richSnippet","isPartOf":{"@id":"https://wavesgym.com/classes/#webpage"},"image":{"@id":"https://wavesgym.com/wp-content/uploads/2022/05/Waves-Spotlight-Classes.jpg"},"inLanguage":"en-GB","mainEntityOfPage":{"@id":"https://wavesgym.com/classes/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Waves Gym &raquo; Feed" href="https://wavesgym.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Waves Gym &raquo; Comments Feed" href="https://wavesgym.com/comments/feed/" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='https://wavesgym.com/wp-includes/css/dist/block-library/style.min.css?ver=6.3.2' type='text/css' media='all' />
+<style id='joinchat-button-style-inline-css' type='text/css'>
+.wp-block-joinchat-button{border:none!important;text-align:center}.wp-block-joinchat-button figure{display:table;margin:0 auto;padding:0}.wp-block-joinchat-button figcaption{font:normal normal 400 .6em/2em var(--wp--preset--font-family--system-font,sans-serif);margin:0;padding:0}.wp-block-joinchat-button .joinchat-button__qr{background-color:#fff;border:6px solid #25d366;border-radius:30px;box-sizing:content-box;display:block;height:200px;margin:auto;overflow:hidden;padding:10px;width:200px}.wp-block-joinchat-button .joinchat-button__qr canvas,.wp-block-joinchat-button .joinchat-button__qr img{display:block;margin:auto}.wp-block-joinchat-button .joinchat-button__link{align-items:center;background-color:#25d366;border:6px solid #25d366;border-radius:30px;display:inline-flex;flex-flow:row nowrap;justify-content:center;line-height:1.25em;margin:0 auto;text-decoration:none}.wp-block-joinchat-button .joinchat-button__link:before{background:transparent var(--joinchat-ico) no-repeat center;background-size:100%;content:"";display:block;height:1.5em;margin:-.75em .75em -.75em 0;width:1.5em}.wp-block-joinchat-button figure+.joinchat-button__link{margin-top:10px}@media (orientation:landscape)and (min-height:481px),(orientation:portrait)and (min-width:481px){.wp-block-joinchat-button.joinchat-button--qr-only figure+.joinchat-button__link{display:none}}@media (max-width:480px),(orientation:landscape)and (max-height:480px){.wp-block-joinchat-button figure{display:none}}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='hello-elementor-css' href='https://wavesgym.com/wp-content/themes/hello-elementor/style.min.css?ver=2.5.0' type='text/css' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://wavesgym.com/wp-content/themes/hello-elementor/theme.min.css?ver=2.5.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://wavesgym.com/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.6.8' type='text/css' media='all' />
+<style id='elementor-frontend-inline-css' type='text/css'>
+.elementor-3129 .elementor-element.elementor-element-9e6fc1a:not(.elementor-motion-effects-element-type-background), .elementor-3129 .elementor-element.elementor-element-9e6fc1a > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://wavesgym.com/wp-content/uploads/2022/05/Waves-Spotlight-Classes.jpg");}
+</style>
+<link rel='stylesheet' id='elementor-post-5-css' href='https://wavesgym.com/wp-content/uploads/elementor/css/post-5.css?ver=1659588484' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-css' href='https://wavesgym.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=1692589406' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-pro-css' href='https://wavesgym.com/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-3124-css' href='https://wavesgym.com/wp-content/uploads/elementor/css/post-3124.css?ver=1659589611' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-2999-css' href='https://wavesgym.com/wp-content/uploads/elementor/css/post-2999.css?ver=1659588484' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-3168-css' href='https://wavesgym.com/wp-content/uploads/elementor/css/post-3168.css?ver=1659588484' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-3129-css' href='https://wavesgym.com/wp-content/uploads/elementor/css/post-3129.css?ver=1659588487' type='text/css' media='all' />
+<link rel='stylesheet' id='joinchat-css' href='https://wavesgym.com/wp-content/plugins/creame-whatsapp-me/public/css/joinchat.min.css?ver=4.5.16' type='text/css' media='all' />
+<style id='joinchat-inline-css' type='text/css'>
+.joinchat{ --red:37; --green:211; --blue:102; }
+</style>
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://wavesgym.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://wavesgym.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=1692589406' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://wavesgym.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=1692589406' type='text/css' media='all' />
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.0' id='jquery-core-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js' defer></script>
+<link rel="https://api.w.org/" href="https://wavesgym.com/wp-json/" /><link rel="alternate" type="application/json" href="https://wavesgym.com/wp-json/wp/v2/pages/3124" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://wavesgym.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3.2" />
+<link rel='shortlink' href='https://wavesgym.com/?p=3124' />
+<link rel="alternate" type="application/json+oembed" href="https://wavesgym.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwavesgym.com%2Fclasses%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://wavesgym.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwavesgym.com%2Fclasses%2F&#038;format=xml" />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">window.addEventListener('DOMContentLoaded', function() {
+	jQuery( document ).ready(function($) {
+		var $pagetitle = $('#page-header h1').text();
+		$('#classname').text($pagetitle);
+		if($pagetitle.toLower() === 'membership'){
+
+		} else {
+			$('#header-classname').text($pagetitle);	
+		}
+	});
+});</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  jQuery(function($){
+    var mywindow = $(window);
+    var mypos = mywindow.scrollTop();
+    mywindow.scroll(function() {
+      if (mypos > 40) {
+        
+        if(mywindow.scrollTop() > mypos) {
+          let headerHeight = $('#stickyheaders').outerHeight();
+          $('#stickyheaders').css('transform','translateY(-'+headerHeight+'px)');
+          $('#stickyheaders').removeClass('headerup');
+        } else {
+          $('#stickyheaders').css('transform','translateY(0px)');
+          $('#stickyheaders').addClass('headerup');
+        }
+      } else {
+        $('#stickyheaders').removeClass('headerup');
+      }
+      mypos = mywindow.scrollTop();
+    }); 
+  }); 
+});
+
+</script>
+<style>
+#stickyheaders {
+  -webkit-transition: all 0.34s ease;
+  transition : all 0.34s ease;
+}
+	#stickyheaders.headerup{
+		background-color: rgba(0,0,0,0.65);
+	}
+</style>
+<!-- Global site tag (gtag.js) - Google Ads: 10943760541 -->
+<script type="rocketlazyloadscript" async src="https://www.googletagmanager.com/gtag/js?id=AW-10943760541"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10943760541');
+</script>
+<link rel="icon" href="https://wavesgym.com/wp-content/uploads/2022/05/favicon-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://wavesgym.com/wp-content/uploads/2022/05/favicon-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://wavesgym.com/wp-content/uploads/2022/05/favicon-300x300.png" />
+<meta name="msapplication-TileImage" content="https://wavesgym.com/wp-content/uploads/2022/05/favicon-300x300.png" />
+</head>
+<body class="page-template-default page page-id-3124 page-parent wp-custom-logo elementor-default elementor-kit-5 elementor-page elementor-page-3124 elementor-page-3129">
+
+		<div data-elementor-type="header" data-elementor-id="2999" class="elementor elementor-2999 elementor-location-header">
+						<div class="elementor-element elementor-element-3dc65b2 sticker-header e-container--row e-container" data-id="3dc65b2" data-element_type="container" id="stickyheaders" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;],&quot;position&quot;:&quot;absolute&quot;,&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">		<div class="elementor-element elementor-element-3960da7 e-container--column e-container" data-id="3960da7" data-element_type="container">				<div class="elementor-element elementor-element-59b0589 elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="59b0589" data-element_type="widget" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.8 - 27-07-2022 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>													<a href="https://wavesgym.com">
+							<img width="1152" height="484" src="https://wavesgym.com/wp-content/uploads/2022/05/logo-waves-gym.svg" class="attachment-full size-full" alt="Waves Gym" />								</a>
+															</div>
+				</div>
+		</div><div class="elementor-element elementor-element-4057671 e-container--column e-container" data-id="4057671" data-element_type="container">				<div class="elementor-element elementor-element-a499e24 elementor-nav-menu--stretch elementor-widget-tablet__width-auto elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="a499e24" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="https://wavesgym.com/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css">			<nav migration_allowed="1" migrated="0" role="navigation" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-text e--animation-float">
+				<ul id="menu-1-a499e24" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3124 current_page_item menu-item-3140"><a href="https://wavesgym.com/classes/" aria-current="page" class="elementor-item elementor-item-active">Classes</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3151"><a href="https://wavesgym.com/membership/" class="elementor-item">Membership</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3237"><a href="https://wavesgym.com/personal-training/" class="elementor-item">Personal Training</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3238"><a href="https://wavesgym.com/nutrition-counseling/" class="elementor-item">Nutrition Counseling</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3239"><a href="https://wavesgym.com/offers/" class="elementor-item">Offers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3240"><a href="https://wavesgym.com/careers/" class="elementor-item">Careers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3241"><a href="https://wavesgym.com/location/" class="elementor-item">Location</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true">
+				<ul id="menu-2-a499e24" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3124 current_page_item menu-item-3140"><a href="https://wavesgym.com/classes/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Classes</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3151"><a href="https://wavesgym.com/membership/" class="elementor-item" tabindex="-1">Membership</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3237"><a href="https://wavesgym.com/personal-training/" class="elementor-item" tabindex="-1">Personal Training</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3238"><a href="https://wavesgym.com/nutrition-counseling/" class="elementor-item" tabindex="-1">Nutrition Counseling</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3239"><a href="https://wavesgym.com/offers/" class="elementor-item" tabindex="-1">Offers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3240"><a href="https://wavesgym.com/careers/" class="elementor-item" tabindex="-1">Careers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3241"><a href="https://wavesgym.com/location/" class="elementor-item" tabindex="-1">Location</a></li>
+</ul>			</nav>
+				</div>
+				</div>
+		</div></div>				</div>
+				<div data-elementor-type="single-page" data-elementor-id="3129" class="elementor elementor-3129 elementor-location-single post-3124 page type-page status-publish has-post-thumbnail hentry">
+						<div class="elementor-element elementor-element-9e6fc1a e-container--column e-container" data-id="9e6fc1a" data-element_type="container" id="page-header" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">				<div class="elementor-element elementor-element-25ad390 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="25ad390" data-element_type="widget" data-widget_type="theme-post-title.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.8 - 27-07-2022 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h1 class="elementor-heading-title elementor-size-default">Classes</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-699211f elementor-widget elementor-widget-theme-post-excerpt" data-id="699211f" data-element_type="widget" data-widget_type="theme-post-excerpt.default">
+				<div class="elementor-widget-container">
+			The best group exercise classes in Mumbai		</div>
+				</div>
+		</div><div class="elementor-element elementor-element-6d9cccb e-container--column e-container" data-id="6d9cccb" data-element_type="container">				<div class="elementor-element elementor-element-153bb54 elementor-widget elementor-widget-theme-post-content" data-id="153bb54" data-element_type="widget" data-widget_type="theme-post-content.default">
+				<div class="elementor-widget-container">
+					<div data-elementor-type="wp-page" data-elementor-id="3124" class="elementor elementor-3124">
+							<div class="elementor-element elementor-element-745ccb8 e-container--column e-container" data-id="745ccb8" data-element_type="container">				<div class="elementor-element elementor-element-ff2efd3 elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-posts--thumbnail-top elementor-card-shadow-yes elementor-posts__hover-gradient elementor-widget elementor-widget-posts" data-id="ff2efd3" data-element_type="widget" data-settings="{&quot;cards_columns&quot;:&quot;3&quot;,&quot;cards_columns_tablet&quot;:&quot;2&quot;,&quot;cards_columns_mobile&quot;:&quot;1&quot;,&quot;cards_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:35,&quot;sizes&quot;:[]},&quot;cards_row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;cards_row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="posts.cards">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="https://wavesgym.com/wp-content/plugins/elementor-pro/assets/css/widget-posts.min.css">		<div class="elementor-posts-container elementor-posts elementor-posts--skin-cards elementor-grid">
+				<article class="elementor-post elementor-grid-item post-2955 workout type-workout status-publish has-post-thumbnail hentry">
+			<div class="elementor-post__card">
+				<a class="elementor-post__thumbnail__link" href="https://wavesgym.com/workout/crossfit-group-training-class/" ><div class="elementor-post__thumbnail"><img width="300" height="200" src="https://wavesgym.com/wp-content/uploads/2021/02/CrossFit-300x200.jpg" class="attachment-medium size-medium" alt="CrossFit Group Training Classes" decoding="async" loading="lazy" srcset="https://wavesgym.com/wp-content/uploads/2021/02/CrossFit-300x200.jpg 300w, https://wavesgym.com/wp-content/uploads/2021/02/CrossFit-1024x683.jpg 1024w, https://wavesgym.com/wp-content/uploads/2021/02/CrossFit-768x512.jpg 768w, https://wavesgym.com/wp-content/uploads/2021/02/CrossFit-1536x1024.jpg 1536w, https://wavesgym.com/wp-content/uploads/2021/02/CrossFit-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px" /></div></a>
+				<div class="elementor-post__text">
+				<h3 class="elementor-post__title">
+			<a href="https://wavesgym.com/workout/crossfit-group-training-class/" >
+				CrossFit Group Training Class			</a>
+		</h3>
+				<div class="elementor-post__excerpt">
+			<p>Take your workout to the next level with CrossFit Group Training Classes with Pravin</p>
+		</div>
+				</div>
+					</div>
+		</article>
+				<article class="elementor-post elementor-grid-item post-2256 workout type-workout status-publish has-post-thumbnail hentry">
+			<div class="elementor-post__card">
+				<a class="elementor-post__thumbnail__link" href="https://wavesgym.com/workout/kickboxing/" ><div class="elementor-post__thumbnail"><img width="300" height="200" src="https://wavesgym.com/wp-content/uploads/2019/02/Kickboxing_2-300x200.jpg" class="attachment-medium size-medium" alt="Kickboxing" decoding="async" loading="lazy" srcset="https://wavesgym.com/wp-content/uploads/2019/02/Kickboxing_2-300x200.jpg 300w, https://wavesgym.com/wp-content/uploads/2019/02/Kickboxing_2-1024x683.jpg 1024w, https://wavesgym.com/wp-content/uploads/2019/02/Kickboxing_2-768x512.jpg 768w, https://wavesgym.com/wp-content/uploads/2019/02/Kickboxing_2-1536x1024.jpg 1536w, https://wavesgym.com/wp-content/uploads/2019/02/Kickboxing_2-2048x1366.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px" /></div></a>
+				<div class="elementor-post__text">
+				<h3 class="elementor-post__title">
+			<a href="https://wavesgym.com/workout/kickboxing/" >
+				Kickboxing			</a>
+		</h3>
+				<div class="elementor-post__excerpt">
+			<p>Whack them Fitness Struggles and Grow Strong!</p>
+		</div>
+				</div>
+					</div>
+		</article>
+				<article class="elementor-post elementor-grid-item post-1057 workout type-workout status-publish has-post-thumbnail hentry">
+			<div class="elementor-post__card">
+				<a class="elementor-post__thumbnail__link" href="https://wavesgym.com/workout/indoor-cycling/" ><div class="elementor-post__thumbnail"><img width="300" height="200" src="https://wavesgym.com/wp-content/uploads/2018/02/Studio_Cycling-300x200.jpg" class="attachment-medium size-medium" alt="" decoding="async" loading="lazy" srcset="https://wavesgym.com/wp-content/uploads/2018/02/Studio_Cycling-300x200.jpg 300w, https://wavesgym.com/wp-content/uploads/2018/02/Studio_Cycling-1024x683.jpg 1024w, https://wavesgym.com/wp-content/uploads/2018/02/Studio_Cycling-768x512.jpg 768w, https://wavesgym.com/wp-content/uploads/2018/02/Studio_Cycling-1536x1024.jpg 1536w, https://wavesgym.com/wp-content/uploads/2018/02/Studio_Cycling-2048x1366.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px" /></div></a>
+				<div class="elementor-post__text">
+				<h3 class="elementor-post__title">
+			<a href="https://wavesgym.com/workout/indoor-cycling/" >
+				Indoor Cycling			</a>
+		</h3>
+				<div class="elementor-post__excerpt">
+			<p>SWEAT TO A DIFFERENT BEAT</p>
+		</div>
+				</div>
+					</div>
+		</article>
+				<article class="elementor-post elementor-grid-item post-505 workout type-workout status-publish has-post-thumbnail hentry">
+			<div class="elementor-post__card">
+				<a class="elementor-post__thumbnail__link" href="https://wavesgym.com/workout/zumba-fitness/" ><div class="elementor-post__thumbnail"><img width="300" height="200" src="https://wavesgym.com/wp-content/uploads/2017/12/Zumba-1-300x200.jpg" class="attachment-medium size-medium" alt="Zumba Fitness" decoding="async" loading="lazy" srcset="https://wavesgym.com/wp-content/uploads/2017/12/Zumba-1-300x200.jpg 300w, https://wavesgym.com/wp-content/uploads/2017/12/Zumba-1-1024x683.jpg 1024w, https://wavesgym.com/wp-content/uploads/2017/12/Zumba-1-768x512.jpg 768w, https://wavesgym.com/wp-content/uploads/2017/12/Zumba-1-1536x1024.jpg 1536w, https://wavesgym.com/wp-content/uploads/2017/12/Zumba-1-2048x1366.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px" /></div></a>
+				<div class="elementor-post__text">
+				<h3 class="elementor-post__title">
+			<a href="https://wavesgym.com/workout/zumba-fitness/" >
+				Zumba Fitness			</a>
+		</h3>
+				<div class="elementor-post__excerpt">
+			<p>Forget About The Workout, Join The Party!</p>
+		</div>
+				</div>
+					</div>
+		</article>
+				<article class="elementor-post elementor-grid-item post-169 workout type-workout status-publish has-post-thumbnail hentry">
+			<div class="elementor-post__card">
+				<a class="elementor-post__thumbnail__link" href="https://wavesgym.com/workout/power-yoga/" ><div class="elementor-post__thumbnail"><img width="300" height="200" src="https://wavesgym.com/wp-content/uploads/2017/10/Waves-Gym-New-300x200.jpg" class="attachment-medium size-medium" alt="Power Yoga" decoding="async" loading="lazy" srcset="https://wavesgym.com/wp-content/uploads/2017/10/Waves-Gym-New-300x200.jpg 300w, https://wavesgym.com/wp-content/uploads/2017/10/Waves-Gym-New-1024x683.jpg 1024w, https://wavesgym.com/wp-content/uploads/2017/10/Waves-Gym-New-768x512.jpg 768w, https://wavesgym.com/wp-content/uploads/2017/10/Waves-Gym-New-1536x1024.jpg 1536w, https://wavesgym.com/wp-content/uploads/2017/10/Waves-Gym-New-2048x1366.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px" /></div></a>
+				<div class="elementor-post__text">
+				<h3 class="elementor-post__title">
+			<a href="https://wavesgym.com/workout/power-yoga/" >
+				Power Yoga			</a>
+		</h3>
+				<div class="elementor-post__excerpt">
+			<p>The holistic way to deal with stress and fitness!</p>
+		</div>
+				</div>
+					</div>
+		</article>
+				</div>
+
+
+		
+				</div>
+				</div>
+		</div>					</div>
+				</div>
+				</div>
+		</div>				</div>
+				<div data-elementor-type="footer" data-elementor-id="3168" class="elementor elementor-3168 elementor-location-footer">
+						<div class="elementor-element elementor-element-671e2fd e-container--row e-container" data-id="671e2fd" data-element_type="container" id="site-footer" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">		<div class="elementor-element elementor-element-fc91980 e-container--column e-container" data-id="fc91980" data-element_type="container">				<div class="elementor-element elementor-element-30e2dc4 elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="30e2dc4" data-element_type="widget" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+																<a href="https://wavesgym.com">
+							<img width="1152" height="484" src="https://wavesgym.com/wp-content/uploads/2022/05/logo-waves-gym.svg" class="attachment-full size-full" alt="Waves Gym" loading="lazy" />								</a>
+															</div>
+				</div>
+				<div class="elementor-element elementor-element-8f12910 elementor-widget elementor-widget-text-editor" data-id="8f12910" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.8 - 27-07-2022 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<p>506 Morya Estate, <br />Opposite Infiniti Mall, <br />New Link Road, Andheri West, <br />Mumbai – 400 053</p><p><b>Phone:</b> +9122 6678 7970<br /><b>Email:</b> info@wavesgym.com</p>						</div>
+				</div>
+		</div><div class="elementor-element elementor-element-de0effb e-container--column e-container" data-id="de0effb" data-element_type="container">				<div class="elementor-element elementor-element-95770d3 elementor-widget elementor-widget-heading" data-id="95770d3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Sitemap</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9a210e3 elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="9a210e3" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav migration_allowed="1" migrated="0" role="navigation" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-9a210e3" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3245"><a href="https://wavesgym.com/about-us/" class="elementor-item">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3249"><a href="https://wavesgym.com/membership/" class="elementor-item">Membership</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3124 current_page_item menu-item-3248"><a href="https://wavesgym.com/classes/" aria-current="page" class="elementor-item elementor-item-active">Classes</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3242"><a href="https://wavesgym.com/offers/" class="elementor-item">Offers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3243"><a href="https://wavesgym.com/careers/" class="elementor-item">Careers at Waves Gym</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3244"><a href="https://wavesgym.com/location/" class="elementor-item">Location</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3246"><a href="https://wavesgym.com/terms-conditions/" class="elementor-item">Terms &#038; Conditions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3247"><a href="https://wavesgym.com/membership-policy/" class="elementor-item">Membership Policy</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true">
+				<ul id="menu-2-9a210e3" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3245"><a href="https://wavesgym.com/about-us/" class="elementor-item" tabindex="-1">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3249"><a href="https://wavesgym.com/membership/" class="elementor-item" tabindex="-1">Membership</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3124 current_page_item menu-item-3248"><a href="https://wavesgym.com/classes/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Classes</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3242"><a href="https://wavesgym.com/offers/" class="elementor-item" tabindex="-1">Offers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3243"><a href="https://wavesgym.com/careers/" class="elementor-item" tabindex="-1">Careers at Waves Gym</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3244"><a href="https://wavesgym.com/location/" class="elementor-item" tabindex="-1">Location</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3246"><a href="https://wavesgym.com/terms-conditions/" class="elementor-item" tabindex="-1">Terms &#038; Conditions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3247"><a href="https://wavesgym.com/membership-policy/" class="elementor-item" tabindex="-1">Membership Policy</a></li>
+</ul>			</nav>
+				</div>
+				</div>
+		</div><div class="elementor-element elementor-element-961ac3e e-container--column e-container" data-id="961ac3e" data-element_type="container">				<div class="elementor-element elementor-element-54d14e3 elementor-widget elementor-widget-heading" data-id="54d14e3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Follow Us</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-154208b e-grid-align-left elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="154208b" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.8 - 27-07-2022 */
+.elementor-widget-social-icons.elementor-grid-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-mobile-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-tablet-0 .elementor-widget-container{line-height:1;font-size:0}.elementor-widget-social-icons:not(.elementor-grid-0):not(.elementor-grid-tablet-0):not(.elementor-grid-mobile-0) .elementor-grid{display:inline-grid}.elementor-widget-social-icons .elementor-grid{grid-column-gap:var(--grid-column-gap,5px);grid-row-gap:var(--grid-row-gap,5px);grid-template-columns:var(--grid-template-columns);-webkit-box-pack:var(--justify-content,center);-ms-flex-pack:var(--justify-content,center);justify-content:var(--justify-content,center);justify-items:var(--justify-content,center)}.elementor-icon.elementor-social-icon{font-size:var(--icon-size,25px);line-height:var(--icon-size,25px);width:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)));height:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)))}.elementor-social-icon{--e-social-icon-icon-color:#fff;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;background-color:#818a91;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;cursor:pointer}.elementor-social-icon i{color:var(--e-social-icon-icon-color)}.elementor-social-icon svg{fill:var(--e-social-icon-icon-color)}.elementor-social-icon:last-child{margin:0}.elementor-social-icon:hover{opacity:.9;color:#fff}.elementor-social-icon-android{background-color:#a4c639}.elementor-social-icon-apple{background-color:#999}.elementor-social-icon-behance{background-color:#1769ff}.elementor-social-icon-bitbucket{background-color:#205081}.elementor-social-icon-codepen{background-color:#000}.elementor-social-icon-delicious{background-color:#39f}.elementor-social-icon-deviantart{background-color:#05cc47}.elementor-social-icon-digg{background-color:#005be2}.elementor-social-icon-dribbble{background-color:#ea4c89}.elementor-social-icon-elementor{background-color:#d30c5c}.elementor-social-icon-envelope{background-color:#ea4335}.elementor-social-icon-facebook,.elementor-social-icon-facebook-f{background-color:#3b5998}.elementor-social-icon-flickr{background-color:#0063dc}.elementor-social-icon-foursquare{background-color:#2d5be3}.elementor-social-icon-free-code-camp,.elementor-social-icon-freecodecamp{background-color:#006400}.elementor-social-icon-github{background-color:#333}.elementor-social-icon-gitlab{background-color:#e24329}.elementor-social-icon-globe{background-color:#818a91}.elementor-social-icon-google-plus,.elementor-social-icon-google-plus-g{background-color:#dd4b39}.elementor-social-icon-houzz{background-color:#7ac142}.elementor-social-icon-instagram{background-color:#262626}.elementor-social-icon-jsfiddle{background-color:#487aa2}.elementor-social-icon-link{background-color:#818a91}.elementor-social-icon-linkedin,.elementor-social-icon-linkedin-in{background-color:#0077b5}.elementor-social-icon-medium{background-color:#00ab6b}.elementor-social-icon-meetup{background-color:#ec1c40}.elementor-social-icon-mixcloud{background-color:#273a4b}.elementor-social-icon-odnoklassniki{background-color:#f4731c}.elementor-social-icon-pinterest{background-color:#bd081c}.elementor-social-icon-product-hunt{background-color:#da552f}.elementor-social-icon-reddit{background-color:#ff4500}.elementor-social-icon-rss{background-color:#f26522}.elementor-social-icon-shopping-cart{background-color:#4caf50}.elementor-social-icon-skype{background-color:#00aff0}.elementor-social-icon-slideshare{background-color:#0077b5}.elementor-social-icon-snapchat{background-color:#fffc00}.elementor-social-icon-soundcloud{background-color:#f80}.elementor-social-icon-spotify{background-color:#2ebd59}.elementor-social-icon-stack-overflow{background-color:#fe7a15}.elementor-social-icon-steam{background-color:#00adee}.elementor-social-icon-stumbleupon{background-color:#eb4924}.elementor-social-icon-telegram{background-color:#2ca5e0}.elementor-social-icon-thumb-tack{background-color:#1aa1d8}.elementor-social-icon-tripadvisor{background-color:#589442}.elementor-social-icon-tumblr{background-color:#35465c}.elementor-social-icon-twitch{background-color:#6441a5}.elementor-social-icon-twitter{background-color:#1da1f2}.elementor-social-icon-viber{background-color:#665cac}.elementor-social-icon-vimeo{background-color:#1ab7ea}.elementor-social-icon-vk{background-color:#45668e}.elementor-social-icon-weibo{background-color:#dd2430}.elementor-social-icon-weixin{background-color:#31a918}.elementor-social-icon-whatsapp{background-color:#25d366}.elementor-social-icon-wordpress{background-color:#21759b}.elementor-social-icon-xing{background-color:#026466}.elementor-social-icon-yelp{background-color:#af0606}.elementor-social-icon-youtube{background-color:#cd201f}.elementor-social-icon-500px{background-color:#0099e5}.elementor-shape-rounded .elementor-icon.elementor-social-icon{border-radius:10%}.elementor-shape-circle .elementor-icon.elementor-social-icon{border-radius:50%}</style>		<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-bc9d62a" href="https://www.facebook.com/wavesgym" target="_blank" rel="nofollow">
+						<span class="elementor-screen-only">Facebook</span>
+						<i class="fab fa-facebook"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-0e9b4ec" href="http://instagram.com/wavesgym/" target="_blank" rel="nofollow">
+						<span class="elementor-screen-only">Instagram</span>
+						<i class="fab fa-instagram"></i>					</a>
+				</span>
+					</div>
+				</div>
+				</div>
+		</div></div><div class="elementor-element elementor-element-1e1f3f1 e-container--row e-container" data-id="1e1f3f1" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">		<div class="elementor-element elementor-element-f2e9285 e-container--column e-container" data-id="f2e9285" data-element_type="container">				<div class="elementor-element elementor-element-92382ee elementor-widget elementor-widget-text-editor" data-id="92382ee" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>© 2022 Paradise Fitness &amp; Health Pvt. Ltd. All Rights Reserved.</p>						</div>
+				</div>
+		</div><div class="elementor-element elementor-element-23e165e e-container--column e-container" data-id="23e165e" data-element_type="container">				<div class="elementor-element elementor-element-34ae906 elementor-widget elementor-widget-text-editor" data-id="34ae906" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Made with ❤ by <a href="https://growl.ie" target="_blank" rel="nofollow noopener">Growl Media</a></p>						</div>
+				</div>
+		</div></div>				</div>
+		
+
+<div class="joinchat joinchat--right" data-settings='{"telephone":"919920084402","mobile_only":false,"button_delay":2,"whatsapp_web":true,"qr":true,"message_views":2,"message_delay":5,"message_badge":true,"message_send":"","message_hash":"1780642d"}'>
+	<div class="joinchat__button">
+		<div class="joinchat__button__open"></div>
+											<div class="joinchat__button__sendtext">Open chat</div>
+						<svg class="joinchat__button__send" width="60" height="60" viewbox="0 0 400 400" stroke-linecap="round" stroke-width="33">
+				<path class="joinchat_svg__plain" d="M168.83 200.504H79.218L33.04 44.284a1 1 0 0 1 1.386-1.188L365.083 199.04a1 1 0 0 1 .003 1.808L34.432 357.903a1 1 0 0 1-1.388-1.187l29.42-99.427"/>
+				<path class="joinchat_svg__chat" d="M318.087 318.087c-52.982 52.982-132.708 62.922-195.725 29.82l-80.449 10.18 10.358-80.112C18.956 214.905 28.836 134.99 81.913 81.913c65.218-65.217 170.956-65.217 236.174 0 42.661 42.661 57.416 102.661 44.265 157.316"/>
+			</svg>
+							<div class="joinchat__badge">1</div>
+												<div class="joinchat__qr"><div>Scan the code</div></div>
+			</div>
+			<div class="joinchat__box">
+			<div class="joinchat__header">
+									<svg class="joinchat__wa" width="120" height="28" viewBox="0 0 120 28"><title>WhatsApp</title><path d="M117.2 17c0 .4-.2.7-.4 1-.1.3-.4.5-.7.7l-1 .2c-.5 0-.9 0-1.2-.2l-.7-.7a3 3 0 0 1-.4-1 5.4 5.4 0 0 1 0-2.3c0-.4.2-.7.4-1l.7-.7a2 2 0 0 1 1.1-.3 2 2 0 0 1 1.8 1l.4 1a5.3 5.3 0 0 1 0 2.3zm2.5-3c-.1-.7-.4-1.3-.8-1.7a4 4 0 0 0-1.3-1.2c-.6-.3-1.3-.4-2-.4-.6 0-1.2.1-1.7.4a3 3 0 0 0-1.2 1.1V11H110v13h2.7v-4.5c.4.4.8.8 1.3 1 .5.3 1 .4 1.6.4a4 4 0 0 0 3.2-1.5c.4-.5.7-1 .8-1.6.2-.6.3-1.2.3-1.9s0-1.3-.3-2zm-13.1 3c0 .4-.2.7-.4 1l-.7.7-1.1.2c-.4 0-.8 0-1-.2-.4-.2-.6-.4-.8-.7a3 3 0 0 1-.4-1 5.4 5.4 0 0 1 0-2.3c0-.4.2-.7.4-1 .1-.3.4-.5.7-.7a2 2 0 0 1 1-.3 2 2 0 0 1 1.9 1l.4 1a5.4 5.4 0 0 1 0 2.3zm1.7-4.7a4 4 0 0 0-3.3-1.6c-.6 0-1.2.1-1.7.4a3 3 0 0 0-1.2 1.1V11h-2.6v13h2.7v-4.5c.3.4.7.8 1.2 1 .6.3 1.1.4 1.7.4a4 4 0 0 0 3.2-1.5c.4-.5.6-1 .8-1.6.2-.6.3-1.2.3-1.9s-.1-1.3-.3-2c-.2-.6-.4-1.2-.8-1.6zm-17.5 3.2l1.7-5 1.7 5h-3.4zm.2-8.2l-5 13.4h3l1-3h5l1 3h3L94 7.3h-3zm-5.3 9.1l-.6-.8-1-.5a11.6 11.6 0 0 0-2.3-.5l-1-.3a2 2 0 0 1-.6-.3.7.7 0 0 1-.3-.6c0-.2 0-.4.2-.5l.3-.3h.5l.5-.1c.5 0 .9 0 1.2.3.4.1.6.5.6 1h2.5c0-.6-.2-1.1-.4-1.5a3 3 0 0 0-1-1 4 4 0 0 0-1.3-.5 7.7 7.7 0 0 0-3 0c-.6.1-1 .3-1.4.5l-1 1a3 3 0 0 0-.4 1.5 2 2 0 0 0 1 1.8l1 .5 1.1.3 2.2.6c.6.2.8.5.8 1l-.1.5-.4.4a2 2 0 0 1-.6.2 2.8 2.8 0 0 1-1.4 0 2 2 0 0 1-.6-.3l-.5-.5-.2-.8H77c0 .7.2 1.2.5 1.6.2.5.6.8 1 1 .4.3.9.5 1.4.6a8 8 0 0 0 3.3 0c.5 0 1-.2 1.4-.5a3 3 0 0 0 1-1c.3-.5.4-1 .4-1.6 0-.5 0-.9-.3-1.2zM74.7 8h-2.6v3h-1.7v1.7h1.7v5.8c0 .5 0 .9.2 1.2l.7.7 1 .3a7.8 7.8 0 0 0 2 0h.7v-2.1a3.4 3.4 0 0 1-.8 0l-1-.1-.2-1v-4.8h2V11h-2V8zm-7.6 9v.5l-.3.8-.7.6c-.2.2-.7.2-1.2.2h-.6l-.5-.2a1 1 0 0 1-.4-.4l-.1-.6.1-.6.4-.4.5-.3a4.8 4.8 0 0 1 1.2-.2 8.3 8.3 0 0 0 1.2-.2l.4-.3v1zm2.6 1.5v-5c0-.6 0-1.1-.3-1.5l-1-.8-1.4-.4a10.9 10.9 0 0 0-3.1 0l-1.5.6c-.4.2-.7.6-1 1a3 3 0 0 0-.5 1.5h2.7c0-.5.2-.9.5-1a2 2 0 0 1 1.3-.4h.6l.6.2.3.4.2.7c0 .3 0 .5-.3.6-.1.2-.4.3-.7.4l-1 .1a21.9 21.9 0 0 0-2.4.4l-1 .5c-.3.2-.6.5-.8.9-.2.3-.3.8-.3 1.3s.1 1 .3 1.3c.1.4.4.7.7 1l1 .4c.4.2.9.2 1.3.2a6 6 0 0 0 1.8-.2c.6-.2 1-.5 1.5-1a4 4 0 0 0 .2 1H70l-.3-1v-1.2zm-11-6.7c-.2-.4-.6-.6-1-.8-.5-.2-1-.3-1.8-.3-.5 0-1 .1-1.5.4a3 3 0 0 0-1.3 1.2v-5h-2.7v13.4H53v-5.1c0-1 .2-1.7.5-2.2.3-.4.9-.6 1.6-.6.6 0 1 .2 1.3.6.3.4.4 1 .4 1.8v5.5h2.7v-6c0-.6 0-1.2-.2-1.6 0-.5-.3-1-.5-1.3zm-14 4.7l-2.3-9.2h-2.8l-2.3 9-2.2-9h-3l3.6 13.4h3l2.2-9.2 2.3 9.2h3l3.6-13.4h-3l-2.1 9.2zm-24.5.2L18 15.6c-.3-.1-.6-.2-.8.2A20 20 0 0 1 16 17c-.2.2-.4.3-.7.1-.4-.2-1.5-.5-2.8-1.7-1-1-1.7-2-2-2.4-.1-.4 0-.5.2-.7l.5-.6.4-.6v-.6L10.4 8c-.3-.6-.6-.5-.8-.6H9c-.2 0-.6.1-.9.5C7.8 8.2 7 9 7 10.7c0 1.7 1.3 3.4 1.4 3.6.2.3 2.5 3.7 6 5.2l1.9.8c.8.2 1.6.2 2.2.1.6-.1 2-.8 2.3-1.6.3-.9.3-1.5.2-1.7l-.7-.4zM14 25.3c-2 0-4-.5-5.8-1.6l-.4-.2-4.4 1.1 1.2-4.2-.3-.5A11.5 11.5 0 0 1 22.1 5.7 11.5 11.5 0 0 1 14 25.3zM14 0A13.8 13.8 0 0 0 2 20.7L0 28l7.3-2A13.8 13.8 0 1 0 14 0z"/></svg>
+								<div class="joinchat__close" aria-label="Close"></div>
+			</div>
+			<div class="joinchat__box__scroll">
+				<div class="joinchat__box__content">
+					<div class="joinchat__message">Thank you for reaching out to Waves Gym - Andheri West in Mumbai. How can I help you?</div>				</div>
+			</div>
+		</div>
+		<svg style="width:0;height:0;position:absolute"><defs><clipPath id="joinchat__message__peak"><path d="M17 25V0C17 12.877 6.082 14.9 1.031 15.91c-1.559.31-1.179 2.272.004 2.272C9.609 18.182 17 18.088 17 25z"/></clipPath></defs></svg>
+	</div>
+<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after" data-rocket-type="text/javascript">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/wavesgym.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after" data-rocket-type="text/javascript">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0' id='hello-theme-frontend-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/creame-whatsapp-me/public/js/kjua.min.js?ver=0.9.0' id='joinchat-kjua-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/creame-whatsapp-me/public/js/joinchat.min.js?ver=4.5.16' id='joinchat-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1' id='smartmenus-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.7.3' id='elementor-pro-webpack-runtime-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.6.8' id='elementor-webpack-runtime-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.6.8' id='elementor-frontend-modules-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1' id='wp-hooks-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef' id='wp-i18n-js'></script>
+<script type="rocketlazyloadscript" id="wp-i18n-js-after" data-rocket-type="text/javascript">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type="rocketlazyloadscript" id="elementor-pro-frontend-js-before" data-rocket-type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/wavesgym.com\/wp-admin\/admin-ajax.php","nonce":"f28fc2ac47","urls":{"assets":"https:\/\/wavesgym.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/wavesgym.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_GB","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/wavesgym.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.7.3' id='elementor-pro-frontend-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2' id='jquery-ui-core-js' defer></script>
+<script type="rocketlazyloadscript" id="elementor-frontend-js-before" data-rocket-type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.6.8","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"a11y_improvements":true,"e_import_export":true,"additional_custom_breakpoints":true,"e_hidden_wordpress_widgets":true,"container":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true,"page-transitions":true,"notes":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/wavesgym.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":3124,"title":"Group%20Fitness%20Classes%20-%20Waves%20Gym%20Andheri%20West","excerpt":"The best group exercise classes in Mumbai","featuredImage":"https:\/\/wavesgym.com\/wp-content\/uploads\/2022\/05\/Waves-Spotlight-Classes-1024x576.jpg"}};
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.6.8' id='elementor-frontend-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.7.3' id='pro-elements-handlers-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://wavesgym.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.7.3' id='e-sticky-js' defer></script>
+
+<script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
